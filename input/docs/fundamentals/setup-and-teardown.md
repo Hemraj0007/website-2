@@ -8,12 +8,12 @@ If you want to do something before the first or after the last task has been run
 ```csharp
 Setup(context =>
 {
-    // Executed BEFORE the first task.
+    // Executed BEFORE the first task is initiated.
 });
 
 Teardown(context =>
 {
-    // Executed AFTER the last task.
+    // Executed AFTER the last task is over.
 });
 ```
 
@@ -38,4 +38,4 @@ TaskTeardown(teardownContext =>
 
 ```
 
-**NOTE:** If `RunTarget` is called before the `Setup` or `Teardown` methods are called, they won't be correctly setup and won't work.
+**NOTE:** If `RunTarget` is called before the `Setup` or `Teardown` methods are called, they won't be setuped correctly and won't work .
